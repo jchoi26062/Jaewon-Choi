@@ -1,0 +1,20 @@
+<div class ="element"></div>
+
+<style>
+	.element{
+  background: red;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+</style>
+
+<script>
+window.addEventListener("mousemove", function(event){
+  console.log(event.clientX);
+  document.getElementsByClassName("element")[0].style.top = event.clientY + "px";
+  document.getElementsByClassName("element")[0].style.left = event.clientX + "px"; 
+});
+</script>
